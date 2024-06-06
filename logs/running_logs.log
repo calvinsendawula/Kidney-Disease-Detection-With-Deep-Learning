@@ -355,3 +355,126 @@ x==========x]
 [2024-06-06 21:16:04,122: INFO: stage_04_model_evaluation: >>>>>> stage Model Evaluation Stage completed <<<<<<
 
 x==========x]
+[2024-06-06 23:26:06,210: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.3:8080]
+[2024-06-06 23:26:06,210: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-06-06 23:26:19,004: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:26:19] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:27:02,194: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "d:\dev\kidney-disease-detection-with-deep-learning\src\kidneyDiseaseClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-06-06 23:27:02,211: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:27:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-06-06 23:28:06,410: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:28:06] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:28:50,998: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.3:8080]
+[2024-06-06 23:28:50,998: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-06-06 23:28:57,218: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:28:57] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:29:02,662: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "d:\dev\kidney-disease-detection-with-deep-learning\src\kidneyDiseaseClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-06-06 23:29:02,662: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:29:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-06-06 23:29:10,617: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:29:10] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:33:11,030: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.3:8080]
+[2024-06-06 23:33:11,030: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-06-06 23:33:15,095: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:33:15] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:33:22,293: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:33:22] "POST /predict HTTP/1.1" 200 -]
+[2024-06-06 23:33:39,806: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:33:39] "POST /predict HTTP/1.1" 200 -]
+[2024-06-06 23:35:32,683: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.3:8080]
+[2024-06-06 23:35:32,683: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-06-06 23:35:35,121: ERROR: app: Exception on / [GET]]
+Traceback (most recent call last):
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\extension.py", line 178, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\app.py", line 25, in home
+    return render_template('index.html')
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\environment.py", line 768, in compile
+    self.handle_exception(source=source_hint)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\kidney_disease_venv\lib\site-packages\jinja2\environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Dev\Kidney-Disease-Detection-With-Deep-Learning\templates\index.html", line 138, in template
+    {% comment %} <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIkAAAAlCAMAAABBJDpuAAAAVFBMVEX/fgD/iQA7NzIyMjMnNYInNYEnNYInNYEzMzInNYQnNYETJzsnNYIwN1wxMjNoTis4O1YrNm0xOF47PE9DP0dEQEVpTVkAJJ4nNYEOLJHJbiAzMzOmmmHRAAAAFnRSTlOh/vu+986oen9fP2UqEzQkFAIDAAEEILVBJQAAA3FJREFUWMPNmO2WoyAMQG0VBARtdVRs3/89NwkgaF1rd2aOm18tIrnkgwSz7n+R7LcV1ELkeS7E7VySRlyfQXJhTiO55c+liP4cEuH1X8E7gaV+S3Jv2zYZ/Vr+/Sdx2vP6doc/fSPcf/GOpLSFVXFUW8t+giRP47TOd60yk1hbxIhSP0ACKPWrvw7YBIT/lcQY84G3Wk17ugWQfg5UsQJpjflKSLQi7xTWyk0SXTJ4VnB5D1yccxmp4Z+mX5KGNS+SPXVNll0ulyxL0wYmloBB6zL/MpCoAgjAJiUM6w0SboMwPUdRogvNKcNM3smFdRvEcJJkKcflQa+X0pNIfBGW0zKqjyQtw4VLKQlI7ZLgdrRNSZDjMQx2GB4pCkxkCrfGWUTJ0Egan6muCHgJCUwtnCk0mrJ9Q8K5LUqtdSfynkAedhynaRqngVDaXLiJEAzkFkM71IuIlWRYtSQpbXSZDvQ7JPCei9brs+oaABkn74LRIkpFaVxGnzjvIxTYREOoEwn5r01JTDRTcO87Eu3zNUeTPKZpjrIRrNIDCjzALbPk7LJMIokOEQu2K7yKQAKvFDF9pVe0R+LGb7h1MMkw2ijjA/1zhSfSphvEAChXJEhAqwYStIJWXnTpvbdH4hTUwSQ2JRmQpILDLYbB7J41SYiLcNozu5Z3JMo7RxBJahI7WSRByCMkqJt9hySESbVJcvmARJGFExJmdBSl2oM2+T4JLWfgaGFptizlPUm1FydHSdyZ7UnS4ySph2kS0kJrkvr5NJg7dnrJnfxgxPozRPGtkyPNOxtaiDvbIAF9L+5B5zTI2BwlwXmM+U3zReav3o0F8oUEFFZ42McDZYomOUziFmezgWyo251Uc1nyKJol7URCEvIYUEbHYaEGQi9C9egwCdVfHwiaajfjKMUcHcRacCylhWJbJDfq47EEDhYqoIWjHnwDXZPpPiChPQelLU+Cbm4w50FmYgkvFwpiWwCC/Um/SLcNElOC9RVj6qWpCiEMvRUK4zLpdKmPw8rVldy/qxjn60wLrVLWJIPLiZJRr3fsvnOHPvare+lB93tb37T20D82jqOt+zNuXhuNvNhp7X+PpHb3rvV9R5xjE2SpyCN9ffQO+GtWIZr5Xnytz4gTMIRYfys47/uJEXny/aQ/95tSUwmU+uRvSp/IHzQqZYpYrQmxAAAAAElFTkSuQmCC" /> {% endcomment %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'comment'.
+[2024-06-06 23:35:35,121: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:35:35] "[35m[1mGET / HTTP/1.1[0m" 500 -]
+[2024-06-06 23:35:35,525: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:35:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2024-06-06 23:36:06,253: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:36:06] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:37:15,072: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:37:15] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:37:18,893: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:37:18] "GET / HTTP/1.1" 200 -]
+[2024-06-06 23:37:34,727: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.18.3:8080]
+[2024-06-06 23:37:34,727: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-06-06 23:37:37,905: INFO: _internal: 192.168.18.3 - - [06/Jun/2024 23:37:37] "GET / HTTP/1.1" 200 -]
