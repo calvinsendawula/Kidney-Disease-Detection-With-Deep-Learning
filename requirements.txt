@@ -16,4 +16,5 @@ scipy
 Flask
 Flask-Cors
 gdown
+dagshub==0.3.27
 -e .
